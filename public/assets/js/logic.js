@@ -1,5 +1,5 @@
 $(function() {
-    $(".change-sleep").on("click", function(event) {
+   /*  $(".change-sleep").on("click", function(event) {
       var id = $(this).data("id");
       var newSleep = $(this).data("newsleep");
   
@@ -18,31 +18,30 @@ $(function() {
           location.reload();
         }
       );
-    });
+    }); */
   
     $(".create-form").on("submit", function(event) {
       // Make sure to preventDefault on a submit event.
       event.preventDefault();
   
-      var newCat = {
+      var newBurg = {
         name: $("#ca").val().trim(),
-        sleepy: $("[name=sleepy]:checked").val().trim()
       };
   
       // Send the POST request.
       $.ajax("/api/burgers", {
         type: "POST",
-        data: newCat
+        data: newBurg
       }).then(
         function() {
-          console.log("created new cat");
+          console.log("created new burger");
           // Reload the page to get the updated list
           location.reload();
         }
       );
     });
   
-    $(".delete-cat").on("click", function(event) {
+    /* $(".delete-cat").on("click", function(event) {
       var id = $(this).data("id");
   
       // Send the DELETE request.
@@ -50,11 +49,12 @@ $(function() {
         type: "DELETE"
       }).then(
         function() {
-          console.log("deleted cat", id);
+          console.log("deleted burger", id);
           // Reload the page to get the updated list
           location.reload();
         }
       );
-    });
+    }); */
+    
   });
   

@@ -4,26 +4,25 @@
 
 <h2>Oh thats that hawaiian burger joint?</h2>
 
-{{!-- ummmmm wtf am i supposed to do here? --}}
-{{!-- <ul>
-  {{#each cats}}
-    {{#unless sleepy}}
-      {{> cats/cat-block sleep=true}}
+<ul>
+  {{#each burgers}}
+    {{#unless devoured}}
+      {{> burgers/burger-block devoured=true}}
     {{/unless}}
   {{/each}}
 </ul>
 
-<h2>Cats that are sleepy!</h2>
+<h2>Burgers Devoured</h2>
 
 <ul>
-  {{#each cats}}
-    {{#if sleepy}}
-      {{> cats/cat-block sleep=false}}
+  {{#each burgers}}
+    {{#if devoured}}
+      {{> burgers/burger-block devoured=false}}
     {{/if}}
   {{/each}}
-</ul> --}}
+</ul>
 
-<h2>Add your favorite burger</h2>
+<h3>Add your favorite burger</h3>
 <form class="create-form">
 
   <div class="form-group">
@@ -31,7 +30,7 @@
     <input type="text" id="ca" name="name">
   </div>
 
-    {{!-- {{!-- dont need this? --}}
+    {{!-- 
   <div class="form-group">
     <label for="sleepy">Sleepy?</label><br>
     <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>

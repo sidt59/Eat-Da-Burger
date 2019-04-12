@@ -4,7 +4,43 @@
 
 <h2>Oh thats that hawaiian burger joint?</h2>
 
-<ul>
+<div class="row">
+  <div class="col-md-6" id="yetToNom">
+      <h2>Burgers</h2>
+
+      <ul>
+          {{#each burgers}}
+              {{#unless devoured}}
+                  <li>
+                      {{burger_name}}
+
+                      {{!-- <button class="triedIt" data-id="{{id}}"> --}}
+                          Yet to nom
+                      </button>
+                  </li>
+              {{/unless}}  
+          {{/each}}      
+      </ul>
+  </div>
+
+
+  <div class="col-md-6" id="haveNomd">
+      <h2>Burgers i nom'd</h2>
+
+      <ul>
+          {{#each burgers}}
+              {{#if devoured}}
+                  <li>
+                      {{burger_name}}
+                  </li>
+              {{/if}}  
+          {{/each}}      
+      </ul>
+  </div>
+</div>
+
+
+{{!-- <ul>
   {{#each burgers}}
     {{#unless devoured}}
       {{> burgers/burger-block devoured=true}}
@@ -20,7 +56,7 @@
       {{> burgers/burger-block devoured=false}}
     {{/if}}
   {{/each}}
-</ul>
+</ul> --}}
 
 <h3>Add your favorite burger</h3>
 <form class="create-form">

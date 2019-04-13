@@ -27,7 +27,7 @@ if (process.env.JAWSDB_URL) {
     port: 3306, 
     user: "r7rczz4y2obxjbh8",
     password: "	m0yt9oocncjxhzhg",
-    database: "burgers_db"
+    database: "	n7ca55ozqfdjh20y"
   });
 };
 

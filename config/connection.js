@@ -6,7 +6,7 @@ if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
   connection = mysql.createConnection({
-    host: "localhost",
+    host: "ip-10-1-0-97",
     port: 3306, 
     user: "root",
     password: "1337t34g59",
@@ -14,7 +14,6 @@ if (process.env.JAWSDB_URL) {
   });
 };
 
-connection.connect();
 // Export connection for orm use
 module.exports = connection;
 

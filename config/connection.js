@@ -13,7 +13,8 @@ let connection;
            database: "burgers_db"
        });
    };
-   
+
+connection.connect();
 //export
 module.exports = connection
 

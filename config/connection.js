@@ -28,8 +28,9 @@ if (process.env.JAWSDB_URL) {
     user: "r7rczz4y2obxjbh8",
     password: "	m0yt9oocncjxhzhg",
     database: "burgers_db"
-  })
-}
+  });
+};
 
+connection.connect();
 // Export connection for orm use
 module.exports = connection;

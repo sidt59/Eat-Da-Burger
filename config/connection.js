@@ -7,7 +7,7 @@ let connection;
    } else {
        connection = mysql.createConnection({
            host: "ip-10-1-0-97",
-           port: 8889,
+           port: 3306,
            user: "root",
            password: "1337t34g59",
            database: "burgers_db"
